@@ -1,4 +1,4 @@
-## Linguagem de programação
+# Linguagem de programação
 
 Maneira de dar instrução ao computador.
 Como um lego, você irá utilizar peças para criar algoritmos, ou seja, para resolver problemas.
@@ -21,12 +21,12 @@ Coletar os dados
 Processar os dados (manipular, alterar ...)
 Apresentar os dados
 
-## Escopo e variáveis:
+## Escopo e variáveis
 
 - [x] Variáveis globais e locais
 - [x] Constantes
 
-## Tipos de dados:
+## Tipos de dados
 
 - [x] Strings (texto): "" '' ``
 - [x] Numbers: 2 1.4
