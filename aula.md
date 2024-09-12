@@ -24,6 +24,7 @@ Apresentar os dados
 ## Escopo e variáveis
 
 - [x] Variáveis globais e locais
+    -Dentro das chaves é um novo escopo, um escopo local. 
 - [x] Constantes
 
 ## Tipos de dados
