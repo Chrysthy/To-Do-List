@@ -1,5 +1,15 @@
 const { select, input } = require('@inquirer/prompts')
 
+let meta = {
+
+    value: "Tomar 3 litros de água por dia",
+    checked: false,
+
+
+}
+
+let metas = [meta]
+
 const cadastrarMeta = async () => {
 
     const meta = await input({ menssage: "Digite a meta:" })
@@ -12,6 +22,7 @@ const cadastrarMeta = async () => {
 
     }
 
+    metas.push({ value: meta, checked: false })
 }
 
 const start = async () => {
@@ -48,7 +59,10 @@ const start = async () => {
 
             case "cadastrar":
 
-                cadastrarMeta()
+                await cadastrarMeta()
+
+                console.log(metas);
+                
 
                 break
 
