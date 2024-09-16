@@ -12,7 +12,7 @@ let metas = [meta]
 
 const cadastrarMeta = async () => {
 
-    const meta = await input({ menssage: "Digite a meta:" })
+    const meta = await input({ message: "Digite a meta:" })
 
     if (meta.length == 0) {
 
@@ -31,7 +31,7 @@ const listarMetas = async () => {
 
         message: "Use as setas para mudar de meta, o espaço para selecionar ou para marcar ou desmarcar e o enter para finalizar essa etapa",
         choices: [...metas],
-        instuctions: false, //como as instruções são passadas em inglês, não iremos deixar
+        instructions: false //como as instruções são passadas em inglês, não iremos deixar
 
     })
 
@@ -62,6 +62,31 @@ const listarMetas = async () => {
 
 }
 
+const metasRealizadas = async () => {
+
+    const realizadas = metas.filter((meta) => {
+
+        return meta.checked
+
+    })
+
+    if (realizadas.length == 0) {
+
+        console.log("Não existem metas realizadas! :(");
+
+        return
+
+    }
+
+    await select({
+
+        message: "Metas Realizadas",
+        choices: [...realizadas]
+
+    })
+
+}
+
 const start = async () => {
 
     while (true) {
@@ -83,6 +108,12 @@ const start = async () => {
                 },
 
                 {
+                    name: "Metas Realizadas",
+                    value: "realizadas"
+
+                },
+
+                {
                     name: "Sair",
                     value: "sair"
                 }
@@ -100,12 +131,17 @@ const start = async () => {
 
                 console.log(metas);
 
-
                 break
 
             case "listar":
 
                 await listarMetas()
+
+                break
+
+            case "realizadas":
+
+                await metasRealizadas()
 
                 break
 
