@@ -31,7 +31,7 @@ const listarMetas = async () => {
 
         message: "Use as setas para mudar de meta, o espaço para selecionar ou para marcar ou desmarcar e o enter para finalizar essa etapa",
         choices: [...metas],
-        instuctions : false, //como as instruções são passadas em inglês, não iremos deixar
+        instuctions: false, //como as instruções são passadas em inglês, não iremos deixar
 
     })
 
@@ -41,6 +41,10 @@ const listarMetas = async () => {
 
         return
     }
+
+    metas.forEach((m) => {
+        m.checked = false
+    })
 
     respostas.forEach(resposta => {
 
@@ -54,7 +58,7 @@ const listarMetas = async () => {
 
     });
 
-    console.log("Meta(s) concluída(s)");
+    console.log("Meta(s) marcada(s) concluída(s)");
 
 }
 
