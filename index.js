@@ -31,7 +31,7 @@ const listarMetas = async () => {
 
         message: "Use as setas para mudar de meta, o espaço para selecionar ou para marcar ou desmarcar e o enter para finalizar essa etapa",
         choices: [...metas],
-        
+        instuctions : false, //como as instruções são passadas em inglês, não iremos deixar
 
     })
 
