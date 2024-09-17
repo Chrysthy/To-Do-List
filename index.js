@@ -15,9 +15,15 @@ const carregarMetas = async () => {
 
     } catch (erro) {
 
+        metas = []
 
     }
 
+}
+
+const salvarMetas = async () => {
+
+    await fs.writeFile("metas.json", JSON.stringify(metas, null, 2))
 
 }
 
@@ -40,6 +46,13 @@ const cadastrarMeta = async () => {
 }
 
 const listarMetas = async () => {
+
+    if (metas.length == 0) {
+
+        mensagem = "Não existem metas!"
+
+        return
+    }
 
     const respostas = await checkbox({
 
@@ -72,17 +85,24 @@ const listarMetas = async () => {
 
     });
 
-    mensagem = "Meta(s) marcada(s) concluída(s)";
+    mensagem = "Meta(s) marcada(s) como concluída(s)";
 
 }
 
 const metasRealizadas = async () => {
 
-    const realizadas = metas.filter((meta) => {
+    if (metas.length == 0) {
 
-        return meta.checked
+        mensagem = "Não existem metas!"
 
-    })
+        return
+    }
+
+        const realizadas = metas.filter((meta) => {
+
+            return meta.checked
+
+        })
 
     if (realizadas.length == 0) {
 
@@ -105,7 +125,7 @@ const metasAbertas = async () => {
 
     const abertas = metas.filter(() => {
 
-        return meta.checked != true
+        return metas.checked != true
     })
 
     if (abertas.length == 0) {
@@ -178,10 +198,14 @@ const mostrarMensagem = () => {
 
 const start = async () => {
 
+    await carregarMetas()
+
     while (true) {
 
         //vai limpar todas as vezes que for inicar qualquer coisa na aplicação
         mostrarMensagem()
+
+        await salvarMetas()
 
         const opcao = await select({
 
