@@ -1,10 +1,11 @@
 const { select, input, checkbox } = require('@inquirer/prompts')
 
+let mensagem = "Bem vindo(a) ao App de Metas"
+
 let meta = {
 
     value: "Tomar 3 litros de água por dia",
     checked: false,
-
 
 }
 
@@ -16,13 +17,16 @@ const cadastrarMeta = async () => {
 
     if (meta.length == 0) {
 
-        console.log("A meta não pode ser vazia.");
+        mensagem = "A meta não pode ser vazia.";
 
         return //cadastrarMeta() caso queira que deixar "preso" até cadastrar uma meta
 
     }
 
     metas.push({ value: meta, checked: false })
+
+    mensagem = "Meta cadastrada com sucesso!"
+
 }
 
 const listarMetas = async () => {
@@ -41,7 +45,7 @@ const listarMetas = async () => {
 
     if (respostas.length == 0) {
 
-        console.log("Nenhuma meta selecionada!");
+        mensagem = "Nenhuma meta selecionada!";
 
         return
     }
@@ -58,7 +62,7 @@ const listarMetas = async () => {
 
     });
 
-    console.log("Meta(s) marcada(s) concluída(s)");
+    mensagem = "Meta(s) marcada(s) concluída(s)";
 
 }
 
@@ -72,7 +76,7 @@ const metasRealizadas = async () => {
 
     if (realizadas.length == 0) {
 
-        console.log("Não existem metas realizadas! :(");
+        mensagem = "Não existem metas realizadas! :(";
 
         return
 
@@ -96,7 +100,7 @@ const metasAbertas = async () => {
 
     if (abertas.length == 0) {
 
-        console.log("Não existe metas abertas! :)");
+        mensagem = "Não existe metas abertas! :)";
 
         return
     }
@@ -125,7 +129,7 @@ const deletarMetas = async () => {
 
     if (itensADeletar.length == 0) {
 
-        console.log("Nenhum item para deletar!");
+        mensagem = "Nenhum item para deletar!";
 
         return
 
@@ -141,13 +145,33 @@ const deletarMetas = async () => {
 
     })
 
-    console.log("Meta(s) deletada(s) com sucesso!");
+    mensagem = "Meta(s) deletada(s) com sucesso!";
+
+}
+
+const mostrarMensagem = () => {
+
+    //vai limpar todas as vezes que for inicar qualquer coisa na aplicação
+    console.clear()
+
+    if (mensagem != "") {
+
+        console.log(mensagem);
+
+        console.log("");
+
+        mensagem = ""
+
+    }
 
 }
 
 const start = async () => {
 
     while (true) {
+
+        //vai limpar todas as vezes que for inicar qualquer coisa na aplicação
+        mostrarMensagem()
 
         const opcao = await select({
 
@@ -198,8 +222,6 @@ const start = async () => {
             case "cadastrar":
 
                 await cadastrarMeta()
-
-                console.log(metas);
 
                 break
 
