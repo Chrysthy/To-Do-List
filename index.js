@@ -98,11 +98,11 @@ const metasRealizadas = async () => {
         return
     }
 
-        const realizadas = metas.filter((meta) => {
+    const realizadas = metas.filter((meta) => {
 
-            return meta.checked
+        return meta.checked
 
-        })
+    })
 
     if (realizadas.length == 0) {
 
@@ -123,9 +123,15 @@ const metasRealizadas = async () => {
 
 const metasAbertas = async () => {
 
-    const abertas = metas.filter(() => {
+    if (metas.length == 0) {
+        mensagem = "Não existem metas!"
+        return
+    }
 
-        return metas.checked != true
+
+    const abertas = metas.filter((meta) => {
+
+        return meta.checked != true
     })
 
     if (abertas.length == 0) {
@@ -144,6 +150,13 @@ const metasAbertas = async () => {
 
 const deletarMetas = async () => {
 
+    if (metas.length == 0) {
+
+        mensagem = "Não existem metas!"
+
+        return
+    }
+
     const metasDesmarcadas = metas.map((meta) => {
 
         return { value: meta.value, checked: false }
@@ -153,7 +166,7 @@ const deletarMetas = async () => {
 
         message: "Selecione item para deletar",
         choices: [...metasDesmarcadas],
-        instructions: false
+        instructions: false,
 
     })
 
@@ -167,7 +180,7 @@ const deletarMetas = async () => {
 
     itensADeletar.forEach((item) => {
 
-        metas.filter((meta) => {
+        metas = metas.filter((meta) => {
 
             return meta.value != item
 
