@@ -21,11 +21,13 @@ const carregarMetas = async () => {
 
 }
 
+
 const salvarMetas = async () => {
 
     await fs.writeFile("metas.json", JSON.stringify(metas, null, 2))
 
 }
+
 
 const cadastrarMeta = async () => {
 
@@ -44,6 +46,7 @@ const cadastrarMeta = async () => {
     mensagem = "Meta cadastrada com sucesso!"
 
 }
+
 
 const listarMetas = async () => {
 
@@ -89,6 +92,7 @@ const listarMetas = async () => {
 
 }
 
+
 const metasRealizadas = async () => {
 
     if (metas.length == 0) {
@@ -121,6 +125,7 @@ const metasRealizadas = async () => {
 
 }
 
+
 const metasAbertas = async () => {
 
     if (metas.length == 0) {
@@ -147,6 +152,7 @@ const metasAbertas = async () => {
         choices: [...abertas]
     })
 }
+
 
 const deletarMetas = async () => {
 
@@ -192,6 +198,7 @@ const deletarMetas = async () => {
 
 }
 
+
 const mostrarMensagem = () => {
 
     //vai limpar todas as vezes que for inicar qualquer coisa na aplicação
@@ -208,6 +215,7 @@ const mostrarMensagem = () => {
     }
 
 }
+
 
 const start = async () => {
 
