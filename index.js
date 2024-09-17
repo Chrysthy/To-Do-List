@@ -1,15 +1,25 @@
 const { select, input, checkbox } = require('@inquirer/prompts')
+const fs = require("fs").promises
 
 let mensagem = "Bem vindo(a) ao App de Metas"
 
-let meta = {
+let metas
 
-    value: "Tomar 3 litros de água por dia",
-    checked: false,
+const carregarMetas = async () => {
+
+    try {
+
+        const dados = await fs.readFile("metas.json", "utf-8")
+
+        metas = JSON.parse(dados)
+
+    } catch (erro) {
+
+
+    }
+
 
 }
-
-let metas = [meta]
 
 const cadastrarMeta = async () => {
 
