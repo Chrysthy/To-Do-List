@@ -1,6 +1,18 @@
 [
-    {
-        "value": "Tomar 3 litros de água por dia",
-        "checked": false
-    }
+  {
+    "value": "Pular corda por 20 minutos",
+    "checked": true
+  },
+  {
+    "value": "Beber ao menos 2 litros de água",
+    "checked": false
+  },
+  {
+    "value": "Estudar por pelo menos 3 horas",
+    "checked": false
+  },
+  {
+    "value": "Jantar ovo mexido",
+    "checked": true
+  }
 ]
