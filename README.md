@@ -26,20 +26,36 @@
 
 ## ✨ Features
 
-[X] Create goals
-[X] List goals
-[X] View completed goals
-[X] View open goals
-[X] Mark/Unmark goals as completed
-[X] Remove goals
-[X] Messaging system
-[X] Persist data
-[X] Asynchronous Functions (async/await)
-[X] Module Import (require, CommonJS)
-[X]'Inquirer' Library for Creating Interactive Prompts
-[X] FS (File System)
+- [X] Create goals
+- [X] List goals
+- [X] View completed goals
+- [X] View open goals
+- [X] Mark/Unmark goals as completed
+- [X] Remove goals
+- [X] Messaging system
+- [X] Persist data
+- [X] Asynchronous Functions (async/await)
+- [X] Module Import (require, CommonJS)
+- [X] "Inquirer" Library for Creating Interactive Prompts
+- [X] FS (File System)
 
 ## 💻 Project
 
 - The website was created to practice JavaScript, Node and JSON skills.
+
+## 📜 License
+
+* This project is licensed under the [MIT License](https://choosealicense.com/licenses/mit/)
+
+<br>
+<hr>
+<h2> Suggestions </h2>
+<p> Do you want to add or report an error? Please, feel free to do it! 😉 </p>
+
+<br>
+<hr>
+<h2> Support </h2>
+<p> If you liked it, press the Star ⭐ Button, please! 😄 </p>
+
+
 
