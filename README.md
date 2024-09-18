@@ -26,9 +26,18 @@
 
 ## ✨ Features
 
-- Page Integration;
-- Responsive layout;
-- Search in the 'database'.
+[X] Create goals
+[X] List goals
+[X] View completed goals
+[X] View open goals
+[X] Mark/Unmark goals as completed
+[X] Remove goals
+[X] Messaging system
+[X] Persist data
+[X] Asynchronous Functions (async/await)
+[X] Module Import (require, CommonJS)
+[X]'Inquirer' Library for Creating Interactive Prompts
+[X] FS (File System)
 
 ## 💻 Project
 
