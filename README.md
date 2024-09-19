@@ -18,12 +18,16 @@
   <img alt="Imagem do Projeto" src=".github/to-do-project.gif" width="80%">
 </p>
 
+<br>
+
 ## 🛠 Technologies
 
 - JavaScript;
 - Node;
 - JSON;
 - Git e GitHub.
+
+<br>
 
 ## ✨ Features
 
@@ -39,6 +43,8 @@
 - [X] Module Import (require, CommonJS)
 - [X] "Inquirer" Library for Creating Interactive Prompts
 - [X] FS (File System)
+
+<br>
 
 ## 💻 Project
 
