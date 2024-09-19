@@ -52,7 +52,7 @@
 
 <br>
 
-## ⚙️ How to Run
+## ⚙ How to Run
 
 - You need to have <kbd>[NodeJS](https://nodejs.org/en/download/)</kbd> installed on your machine.
 - Clone the project.
