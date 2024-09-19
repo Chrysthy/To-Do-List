@@ -6,7 +6,7 @@
   <a href="#-technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-features">Features</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-project">Project</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-how-to-run">How to Run</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#how-to-run">How to Run</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-license">License</a>  
 </p>
 
@@ -44,8 +44,16 @@
 
 - The website was created to practice JavaScript, Node and JSON skills.
 
+<br>
+
 ## ⚙️ How to Run
 
+- You need to have <kbd>[NodeJS](https://nodejs.org/en/download/)</kbd> installed on your machine.
+- Clone the project.
+- Open the terminal and run <kbd>npm install</kbd>.
+- After installation, run <kbd>node index.js</kbd>.
+
+<br>
 
 ## 📜 License
 
