@@ -6,6 +6,7 @@
   <a href="#-technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-features">Features</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-project">Project</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-how-to-run">How to Run</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-license">License</a>  
 </p>
 
@@ -14,7 +15,7 @@
 </p>
 
 <p align="center">
-  <img alt="Imagem do Projeto" src=".github/to-do-project.gif" width="100%">
+  <img alt="Imagem do Projeto" src=".github/to-do-project.gif" width="80%">
 </p>
 
 ## 🛠 Technologies
@@ -42,6 +43,9 @@
 ## 💻 Project
 
 - The website was created to practice JavaScript, Node and JSON skills.
+
+## ⚙️ How to Run
+
 
 ## 📜 License
 
